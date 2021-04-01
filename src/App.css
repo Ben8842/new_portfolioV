@@ -1,38 +1,610 @@
-.App {
+.col-sm-3 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+iframe {
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  padding: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+h5 {
+  text-align: center;
+  padding: 10px;
+}
+
+.links {
+  text-align: center;
+  padding: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.btn-toolbar {
+  text-align: center;
+  display: block;
+}
+/*div {
+  overflow-x: hidden;
+}*/
+
+#mazedecor {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#mazedecor0 {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+#mazedecor00 {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#mazedecor2 {
+  position: fixed;
+  top: 0;
+  right: 10px;
+}
+
+#mazedecor3 {
+  position: fixed;
+  top: 0;
+  right: 20px;
+}
+
+#mazedecor4 {
+  position: fixed;
+  top: 0;
+  right: 30px;
+}
+
+.top {
   color: white;
+  background-color: rgba(15, 146, 228, 0.281);
+  height: 80px;
+  width: 110%;
+
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  font-size: 24px;
 }
 
-.App-link {
-  color: #61dafb;
+.topmenu {
+  padding: 10px;
+  margin-left: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bpad {
+  padding: 20px;
+}
+
+.carousel {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+.carouselContainer {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  align-items: center;
+}
+.col-md-2 {
+  text-align: center;
+}
+
+.primary {
+  color: white;
+  background-color: rgb(0, 23, 37);
+  height: 800px;
+  width: 100%;
+  padding: 20px;
+  overflow-x: hidden;
+  z-index: -2;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a.active {
+  color: rgb(255, 221, 249);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a.active:hover {
+  color: rgb(160, 252, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a.visited {
+  color: rgb(255, 221, 249);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.secondary {
+  color: white;
+
+  height: 600px;
+  padding: 50px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.bgrey {
+  border: none;
+  background-color: rgba(107, 105, 107, 0);
+  color: white;
+  padding: 0;
+  font-size: 5px;
+  margin: 0px;
+  height: 50px;
+  text-align: center;
+  width: 50px;
+}
+
+#divinside {
+  margin: 50%;
+}
+
+.newLine {
+  height: 8px;
+}
+
+.newLine--sml {
+  height: 8px;
+}
+
+.newLine--med {
+  height: 8px;
+}
+
+.newLine--lrg {
+  height: 16px;
+}
+
+#nameT {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  text-align: left;
+}
+
+#more {
+  text-align: center;
+  margin: 20px;
+  padding: 10px;
+}
+
+.entireThing {
+  margin: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+button:focus {
+  outline: none;
+}
+
+.bSquare {
+  border: none;
+  background-color: black;
+  color: black;
+  padding: 0;
+
+  margin: 0px;
+  text-align: center;
+}
+
+.bSquare--sml {
+  height: 8px;
+  width: 8px;
+}
+
+.bSquare--med {
+  height: 8px;
+  width: 8px;
+}
+
+.bSquare--lrg {
+  height: 16px;
+  width: 16px;
+}
+
+.bSquare--black {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.bSquare--grey {
+  background-color: rgba(128, 128, 128, 0.342);
+}
+
+.bSquare--pink {
+  background-color: rgb(255, 0, 200);
+}
+
+.bSquare--pink2 {
+  background-color: rgb(234, 0, 255);
+}
+
+.bSquare--purple {
+  background-color: rgb(162, 0, 255);
+}
+
+.bSquare--blue {
+  background-color: rgb(0, 17, 255);
+}
+
+.bSquare--blue2 {
+  background-color: rgb(0, 217, 255);
+}
+
+.bSquare--green {
+  background-color: rgb(72, 255, 0);
+}
+
+.bSquare--yellow {
+  background-color: rgb(251, 255, 0);
+}
+
+.bSquare--orange {
+  background-color: rgb(255, 124, 2);
+}
+
+.bSquare--red {
+  background-color: rgb(255, 0, 0);
+}
+
+.bSquare--orange2 {
+  background-color: rgb(250, 218, 158);
+}
+
+@media only screen and (max-width: 700px) {
+  .carouselContainer {
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  h1 {
+    text-align: left;
+    align-items: center;
+  }
+  .col-sm-3 {
+    text-align: center;
+  }
+
+  .col-md-2 {
+    text-align: center;
+  }
+
+  .primary {
+    color: white;
+    background-color: rgb(0, 23, 37);
+    height: 800px;
+    width: 100%;
+    overflow-x: hidden;
+    z-index: -2;
+  }
+
+  .top {
+    color: white;
+    background-color: rgba(28, 149, 224, 0.157);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+
+    top: 0px;
+    z-index: 1;
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a:active {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a.active {
+    color: rgb(255, 221, 249);
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a.visited {
+    color: rgb(255, 221, 249);
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a.hover {
+    color: rgb(253, 205, 205);
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  a {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+  .bpad {
+    padding: 20px;
+  }
+
+  .secondary {
+    color: white;
+
+    height: 600px;
+
+    width: 100%;
+    overflow-x: hidden;
+  }
+  .carousel {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    object-fit: contain;
+  }
+
+  .carousel-inner {
+    background-size: cover;
+  }
+
+  .topmenu {
+    padding: 2px;
+    font-size: 10px;
+  }
+  h5 {
+    text-align: center;
+    padding: 10px;
+  }
+
+  #divinside {
+    margin: 50%;
+  }
+
+  .newLine {
+    height: 4px;
+  }
+
+  .newLine--sml {
+    height: 4px;
+  }
+
+  .newLine--med {
+    height: 8px;
+  }
+
+  .newLine--lrg {
+    height: 16px;
+  }
+
+  #nameT {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    text-align: left;
+  }
+
+  #more {
+    text-align: center;
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .entireThing {
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  .bSquare {
+    border: none;
+    background-color: black;
+    color: black;
+    padding: 0;
+
+    margin: 0px;
+    text-align: center;
+  }
+
+  .bSquare--sml {
+    height: 4px;
+    width: 4px;
+  }
+
+  .bSquare--med {
+    height: 8px;
+    width: 8px;
+  }
+
+  .bSquare--lrg {
+    height: 16px;
+    width: 16px;
+  }
+
+  .bSquare--black {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  .bSquare--grey {
+    background-color: rgba(128, 128, 128, 0.342);
+  }
+
+  .bSquare--pink {
+    background-color: rgb(255, 0, 200);
+  }
+
+  .bSquare--pink2 {
+    background-color: rgb(234, 0, 255);
+  }
+
+  .bSquare--purple {
+    background-color: rgb(162, 0, 255);
+  }
+
+  .bSquare--blue {
+    background-color: rgb(0, 17, 255);
+  }
+
+  .bSquare--blue2 {
+    background-color: rgb(0, 217, 255);
+  }
+
+  .bSquare--green {
+    background-color: rgb(72, 255, 0);
+  }
+
+  .bSquare--yellow {
+    background-color: rgb(251, 255, 0);
+  }
+
+  .bSquare--orange {
+    background-color: rgb(255, 124, 2);
+  }
+
+  .bSquare--red {
+    background-color: rgb(255, 0, 0);
+  }
+
+  .bSquare--orange2 {
+    background-color: rgb(250, 218, 158);
+  }
+
+  #mazedecor {
+    position: fixed;
+    top: 0px;
+    left: 12px;
+  }
+
+  #mazedecor2 {
+    position: fixed;
+    top: 0;
+    right: 50px;
+  }
+
+  #mazedecor3 {
+    position: fixed;
+    top: 0;
+    right: 110px;
+  }
+
+  #mazedecor4 {
+    position: fixed;
+    top: 0;
+    right: 170px;
+  }
+  #mazedecor5 {
+    position: fixed;
+    top: 0;
+    right: 240px;
+  }
+
+  #mazedecor0 {
+    position: fixed;
+    top: 0px;
+    left: 12px;
+  }
+  #mazedecor00 {
+    position: fixed;
+    top: 0px;
+    left: 12px;
+  }
+
+  .linksI {
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    z-index: 0;
+    opacity: 1;
+  }
+
+  .links {
+    text-align: center;
+    padding: 10px;
+    z-index: 2;
+    opacity: 0.95;
+  }
+  .example-appear {
+    opacity: 0.01;
+  }
+
+  .example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+  }
+  iframe {
+    width: auto;
+    height: auto;
   }
 }
