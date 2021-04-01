@@ -20,17 +20,6 @@ import React, { Component } from "react";
 //import ReactCSSTransitionGroup from "react-transition-group";
 //import ReactTransitionGroup from "react-addons-transition-group";
 
-//var gifimg = require("./imgfolder/spinningtwo.gif").default;
-/*  <div id="mazedecor2">
-          <Diamond pixelSize="sml" height="10" />
-        </div>
-        <div id="mazedecor3">
-          <Diamond pixelSize="sml" height="10" />
-        </div>
-        <div id="mazedecor4">
-          <Diamond pixelSize="sml" height="10" />
-        </div> */
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -38,7 +27,7 @@ class App extends Component {
       aboutFlag: false,
       contactFlag: false,
       projectFlag: false,
-      homeFlag: false,
+      videoFlag: false,
     };
   }
 
@@ -47,7 +36,7 @@ class App extends Component {
     this.setState({
       aboutFlag: true,
       projectFlag: false,
-      homeFlag: false,
+      videoFlag: false,
       contactFlag: false,
     });
   }
@@ -56,7 +45,7 @@ class App extends Component {
     this.setState({
       aboutFlag: false,
       projectFlag: false,
-      homeFlag: true,
+      videoFlag: true,
       contactFlag: false,
     });
   }
@@ -65,7 +54,7 @@ class App extends Component {
     this.setState({
       aboutFlag: false,
       projectFlag: true,
-      homeFlag: false,
+      videoFlag: false,
       contactFlag: false,
     });
   }
@@ -74,38 +63,40 @@ class App extends Component {
     this.setState({
       aboutFlag: false,
       projectFlag: false,
-      homeFlag: false,
+      videoFlag: false,
       contactFlag: true,
     });
   }
 
   render() {
-    var { homeFlag, aboutFlag, projectFlag, contactFlag } = this.state;
+    var { videoFlag, aboutFlag, projectFlag, contactFlag } = this.state;
     const aboutMaze = (
-      <div id="mazedecor5">
+      <div className="mazediamond">
         <Diamond pixelSize="sml" height="10" />
       </div>
     );
 
     const contactMaze = (
       <div>
-        <div id="mazedecor4">
+        <div className="mazediamond">
           <Diamond pixelSize="sml" height="10" />
         </div>
       </div>
     );
 
     const projectMaze = (
-      <div id="mazedecor3">
+      <div className="mazediamond">
         <Diamond pixelSize="sml" height="10" />
       </div>
     );
 
-    const homeMaze = (
-      <div id="mazedecor2">
+    const videoMaze = (
+      <div className="mazediamond">
         <Diamond pixelSize="sml" height="10" />
       </div>
     );
+    console.log("render state");
+    console.log(this.state);
     return (
       <div>
         <div className="top">
@@ -123,12 +114,13 @@ class App extends Component {
               }}
             >
               <Link
+                className="headerlink"
                 to="about"
                 spy={false}
                 smooth={true}
                 onClick={() => this.linkingA()}
               >
-                About
+                About {aboutFlag ? aboutMaze : null}
               </Link>
             </li>
             <li
@@ -137,12 +129,13 @@ class App extends Component {
               }}
             >
               <Link
+                className="headerlink"
                 to="contact"
                 spy={true}
                 smooth={true}
                 onClick={() => this.linkingC()}
               >
-                Contact
+                Contact {contactFlag ? contactMaze : null}
               </Link>
             </li>
             <li
@@ -151,69 +144,34 @@ class App extends Component {
               }}
             >
               <Link
+                className="headerlink"
                 to="projects"
                 spy={true}
                 smooth={true}
                 onClick={() => this.linkingP()}
               >
-                Projects
+                Projects {projectFlag ? projectMaze : null}
               </Link>
             </li>
+
             <li
               style={{
                 padding: "10px",
               }}
             >
               <Link
-                to="home"
-                spy={true}
-                smooth={true}
-                onClick={() => this.linkingH()}
-              >
-                Home
-              </Link>
-            </li>
-            <li
-              style={{
-                padding: "10px",
-              }}
-            >
-              <Link
+                className="headerlink"
                 to="video"
                 spy={true}
                 smooth={true}
                 onClick={() => this.linkingH()}
               >
-                Video
+                Video {videoFlag ? videoMaze : null}
               </Link>
             </li>
           </ul>
-          <div id="mazedecor0">
-            <Bar pixelSize="sml" height="5" width="75" />
-          </div>
-          <div id="mazedecor00">
-            <Bar pixelSize="sml" height="5" width="75" />
-          </div>
-
-          {aboutFlag ? aboutMaze : null}
-          {contactFlag ? contactMaze : null}
-          {homeFlag ? homeMaze : null}
-          {projectFlag ? projectMaze : null}
         </div>
-        <div
-          id="home"
-          className="secondary"
-          style={{
-            backgroundImage: `url(${Background5})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        >
-          <h1>Benjamin Perkins</h1>
 
-          <h3>Developer</h3>
-        </div>
         <div
           id="about"
           className="secondary"
@@ -225,7 +183,7 @@ class App extends Component {
           }}
         >
           <h1>ABOUT</h1>
-          {aboutMaze}
+
           <Col md="9" sm="0"></Col>
           <Col>
             <h6>Name: Benjamin Perkins</h6>
@@ -287,7 +245,14 @@ class App extends Component {
         </div>
         <div className="primary" id="video">
           <h1>VIDEO</h1>
-          <iframe src={video} frameborder="0" allowfullscreen></iframe>
+          <video
+            src={video}
+            controls
+            frameborder="0"
+            allowfullscreen
+            width="320"
+            height="240"
+          ></video>
         </div>
       </div>
     );
@@ -297,3 +262,4 @@ class App extends Component {
 export default App;
 
 //  <Slides />
+//<iframe src={video} frameborder="0" allowfullscreen></iframe>

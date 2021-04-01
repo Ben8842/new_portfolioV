@@ -195,7 +195,7 @@ class Project extends Component {
     ];
 
     const projectContainer = (
-      <div class="linksI">
+      <div class="centercontent">
         <img
           className="carousel"
           src={project[projectHolder].src}
@@ -215,7 +215,7 @@ class Project extends Component {
           <div>&nbsp;</div>
 
           <ButtonToolbar>
-            <ButtonGroup size="sm">
+            <ButtonGroup className="centercontent" size="sm">
               <Button color="secondary" onClick={() => this.prevNum()}>
                 Prev
               </Button>
