@@ -123,21 +123,7 @@ class App extends Component {
                 About {aboutFlag ? aboutMaze : null}
               </Link>
             </li>
-            <li
-              style={{
-                padding: "10px",
-              }}
-            >
-              <Link
-                className="headerlink"
-                to="contact"
-                spy={true}
-                smooth={true}
-                onClick={() => this.linkingC()}
-              >
-                Contact {contactFlag ? contactMaze : null}
-              </Link>
-            </li>
+
             <li
               style={{
                 padding: "10px",
@@ -151,6 +137,21 @@ class App extends Component {
                 onClick={() => this.linkingP()}
               >
                 Projects {projectFlag ? projectMaze : null}
+              </Link>
+            </li>
+            <li
+              style={{
+                padding: "10px",
+              }}
+            >
+              <Link
+                className="headerlink"
+                to="contact"
+                spy={true}
+                smooth={true}
+                onClick={() => this.linkingC()}
+              >
+                Contact {contactFlag ? contactMaze : null}
               </Link>
             </li>
 
