@@ -534,8 +534,16 @@ button:focus {
   .headerlink {
     position: relative;
     display: inline-block;
-    width: 80px;
+    width: 65px;
     margin-top: 20px;
+  }
+
+  headerlink.active {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    margin-top: 20px;
+    text-decoration: none;
   }
 
   .linksI {
