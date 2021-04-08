@@ -151,46 +151,55 @@ class Project extends Component {
         src: projectArr[0],
         link: "https://optimistic-babbage-2ed085.netlify.app/",
         name: "Maze Algorithm",
+        github: "https://github.com/Ben8842/moremaze",
       },
       {
         src: projectArr[1],
         link: "https://www.moviegame.fun/",
         name: "Movie Game",
+        github: "https://github.com/Ben8842/movieGameFour",
       },
       {
         src: projectArr[2],
         link: "https://tender-benz-d42ce4.netlify.app/",
         name: "Queen Puzzle",
+        github: "https://github.com/Ben8842/eightqueen",
       },
       {
         src: projectArr[3],
         link: "https://jolly-meninsky-2047bc.netlify.app/",
         name: "Triangle",
+        github: "https://github.com/Ben8842/triangle",
       },
       {
         src: projectArr[4],
         link: "https://wordsearch-generator.herokuapp.com/",
-        name: "Word Search Generato",
+        name: "Word Search Generator",
+        github: "https://github.com/Ben8842/moremaze",
       },
       {
         src: projectArr[5],
         link: "https://admiring-spence-0175e7.netlify.app/",
         name: "Snake Game",
+        github: "https://github.com/Ben8842/snake",
       },
       {
         src: projectArr[6],
         link: "https://ben8842.github.io/BitProject/",
         name: "Cryptocurrency Project",
+        github: "https://github.com/Ben8842/BitProject",
       },
       {
         src: projectArr[7],
         link: "https://vibrant-spence-207a4e.netlify.app/",
         name: "Emoji Game",
+        github: "https://github.com/Ben8842/matching-game",
       },
       {
         src: projectArr[8],
         link: "https://trivia-redux.herokuapp.com/",
         name: "Trivia",
+        github: "https://github.com/Ben8842/heroku-trivia",
       },
     ];
 
@@ -211,9 +220,8 @@ class Project extends Component {
             <a href={project[projectHolder].link}>
               {project[projectHolder].name}
             </a>
-          </Button>
+          </Button>{" "}
           <div>&nbsp;</div>
-
           <ButtonToolbar>
             <ButtonGroup className="centercontent" size="sm">
               <Button color="secondary" onClick={() => this.prevNum()}>
@@ -251,6 +259,9 @@ class Project extends Component {
               </Button>
             </ButtonGroup>
           </ButtonToolbar>
+          <Button color="secondary">
+            <a href={project[projectHolder].github}>GitHub Repository</a>
+          </Button>
         </div>
         {projectContainer}
       </div>
