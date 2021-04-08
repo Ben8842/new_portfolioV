@@ -17,8 +17,6 @@ import Project from "./components/Project.js";
 import Bar from "./components/Bar.js";
 import { Link } from "react-scroll";
 import React, { Component } from "react";
-//import ReactCSSTransitionGroup from "react-transition-group";
-//import ReactTransitionGroup from "react-addons-transition-group";
 
 class App extends Component {
   constructor(props) {
