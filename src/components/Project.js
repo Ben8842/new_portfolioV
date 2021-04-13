@@ -175,7 +175,7 @@ class Project extends Component {
         src: projectArr[4],
         link: "https://wordsearch-generator.herokuapp.com/",
         name: "Word Search Generator",
-        github: "https://github.com/Ben8842/moremaze",
+        github: "https://github.com/Ben8842/wordsearch",
       },
       {
         src: projectArr[5],
