@@ -2,52 +2,52 @@ import React, { useState, Component } from "react";
 import { Row, Col, Button, ButtonGroup, ButtonToolbar } from "reactstrap";
 
 import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption,
+	Carousel,
+	CarouselItem,
+	CarouselControl,
+	CarouselIndicators,
+	CarouselCaption,
 } from "reactstrap";
 var projectArr = [
-  require("../img/project/mazedisplay.PNG").default,
-  require("../img/project/movieSix.PNG").default,
-  require("../img/project/queene.PNG").default,
-  require("../img/project/triangle2.png").default,
-  require("../img/project/verticle.PNG").default,
-  require("../img/project/Snakepic.PNG").default,
-  require("../img/project/Cryptopic.PNG").default,
-  require("../img/project/Emojipic.PNG").default,
-  require("../img/project/Triviapic.PNG").default,
+	require("../img/project/mazedisplay.PNG").default,
+	require("../img/project/movieSix.PNG").default,
+	require("../img/project/queene.PNG").default,
+	require("../img/project/triangle2.png").default,
+	require("../img/project/verticle.PNG").default,
+	require("../img/project/Snakepic.PNG").default,
+	require("../img/project/Cryptopic.PNG").default,
+	require("../img/project/Emojipic.PNG").default,
+	require("../img/project/Triviapic.PNG").default,
 ];
 
 class Project extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      aboutFlag: false,
-      contactFlag: false,
-      projectFlag: false,
-      homeFlag: false,
-      projectHolder: 0,
-    };
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			aboutFlag: false,
+			contactFlag: false,
+			projectFlag: false,
+			homeFlag: false,
+			projectHolder: 0,
+		};
+	}
 
-  showProject(e) {
-    this.setState({ projectHolder: e.target.value - 1 });
-  }
+	showProject(e) {
+		this.setState({ projectHolder: e.target.value - 1 });
+	}
 
-  nextNum() {
-    if (this.state.projectHolder === 8) {
-      this.setState({ projectHolder: 0 });
-    } else this.setState({ projectHolder: this.state.projectHolder + 1 });
-  }
+	nextNum() {
+		if (this.state.projectHolder === 8) {
+			this.setState({ projectHolder: 0 });
+		} else this.setState({ projectHolder: this.state.projectHolder + 1 });
+	}
 
-  prevNum() {
-    if (this.state.projectHolder === 0) {
-      this.setState({ projectHolder: 8 });
-    } else this.setState({ projectHolder: this.state.projectHolder - 1 });
-  }
-  /*
+	prevNum() {
+		if (this.state.projectHolder === 0) {
+			this.setState({ projectHolder: 8 });
+		} else this.setState({ projectHolder: this.state.projectHolder - 1 });
+	}
+	/*
     const items = [
         {
             src: projectArr[0],
@@ -144,128 +144,163 @@ class Project extends Component {
         },
     ];
 */
-  render() {
-    var { projectHolder } = this.state;
-    const project = [
-      {
-        src: projectArr[0],
-        link: "https://optimistic-babbage-2ed085.netlify.app/",
-        name: "Maze Algorithm",
-        github: "https://github.com/Ben8842/moremaze",
-      },
-      {
-        src: projectArr[1],
-        link: "https://www.moviegame.fun/",
-        name: "Movie Game",
-        github: "https://github.com/Ben8842/movieGameFour",
-      },
-      {
-        src: projectArr[2],
-        link: "https://tender-benz-d42ce4.netlify.app/",
-        name: "Queen Puzzle",
-        github: "https://github.com/Ben8842/eightqueen",
-      },
-      {
-        src: projectArr[3],
-        link: "https://jolly-meninsky-2047bc.netlify.app/",
-        name: "Triangle",
-        github: "https://github.com/Ben8842/triangle",
-      },
-      {
-        src: projectArr[4],
-        link: "https://wordsearch-generator.herokuapp.com/",
-        name: "Word Search Generator",
-        github: "https://github.com/Ben8842/wordsearch",
-      },
-      {
-        src: projectArr[5],
-        link: "https://admiring-spence-0175e7.netlify.app/",
-        name: "Snake Game",
-        github: "https://github.com/Ben8842/snake",
-      },
-      {
-        src: projectArr[6],
-        link: "https://ben8842.github.io/BitProject/",
-        name: "Cryptocurrency Project",
-        github: "https://github.com/Ben8842/BitProject",
-      },
-      {
-        src: projectArr[7],
-        link: "https://vibrant-spence-207a4e.netlify.app/",
-        name: "Emoji Game",
-        github: "https://github.com/Ben8842/matching-game",
-      },
-      {
-        src: projectArr[8],
-        link: "https://trivia-redux.herokuapp.com/",
-        name: "Trivia",
-        github: "https://github.com/Ben8842/heroku-trivia",
-      },
-    ];
+	render() {
+		var { projectHolder } = this.state;
+		const project = [
+			{
+				src: projectArr[0],
+				link: "https://optimistic-babbage-2ed085.netlify.app/",
+				name: "Maze Algorithm",
+				github: "https://github.com/Ben8842/moremaze",
+			},
+			{
+				src: projectArr[1],
+				link: "https://www.moviegame.fun/",
+				name: "Movie Game",
+				github: "https://github.com/Ben8842/movieGameFour",
+			},
+			{
+				src: projectArr[2],
+				link: "https://tender-benz-d42ce4.netlify.app/",
+				name: "Queen Puzzle",
+				github: "https://github.com/Ben8842/eightqueen",
+			},
+			{
+				src: projectArr[3],
+				link: "https://jolly-meninsky-2047bc.netlify.app/",
+				name: "Triangle",
+				github: "https://github.com/Ben8842/triangle",
+			},
+			{
+				src: projectArr[4],
+				link: "https://wordsearch-generator.herokuapp.com/",
+				name: "Word Search Generator",
+				github: "https://github.com/Ben8842/wordsearch",
+			},
+			{
+				src: projectArr[5],
+				link: "https://admiring-spence-0175e7.netlify.app/",
+				name: "Snake Game",
+				github: "https://github.com/Ben8842/snake",
+			},
+			{
+				src: projectArr[6],
+				link: "https://ben8842.github.io/BitProject/",
+				name: "Cryptocurrency Project",
+				github: "https://github.com/Ben8842/BitProject",
+			},
+			{
+				src: projectArr[7],
+				link: "https://vibrant-spence-207a4e.netlify.app/",
+				name: "Emoji Game",
+				github: "https://github.com/Ben8842/matching-game",
+			},
+			{
+				src: projectArr[8],
+				link: "https://trivia-redux.herokuapp.com/",
+				name: "Trivia",
+				github: "https://github.com/Ben8842/heroku-trivia",
+			},
+		];
 
-    const projectContainer = (
-      <div class="centercontent">
-        <img
-          className="carousel"
-          src={project[projectHolder].src}
-          alt="nothing"
-        />
-      </div>
-    );
+		const projectContainer = (
+			<div class="centercontent">
+				<img
+					className="carousel"
+					src={project[projectHolder].src}
+					alt="nothing"
+				/>
+			</div>
+		);
 
-    return (
-      <div>
-        <div class="links">
-          <Button color="secondary">
-            <a href={project[projectHolder].link}>
-              {project[projectHolder].name}
-            </a>
-          </Button>{" "}
-          <div>&nbsp;</div>
-          <ButtonToolbar>
-            <ButtonGroup className="centercontent" size="sm">
-              <Button color="secondary" onClick={() => this.prevNum()}>
-                Prev
-              </Button>
-              <Button value="1" onClick={(e) => this.showProject(e)}>
-                1
-              </Button>
-              <Button value="2" onClick={(e) => this.showProject(e)}>
-                2
-              </Button>
-              <Button value="3" onClick={(e) => this.showProject(e)}>
-                3
-              </Button>
-              <Button value="4" onClick={(e) => this.showProject(e)}>
-                4
-              </Button>
-              <Button value="5" onClick={(e) => this.showProject(e)}>
-                5
-              </Button>
-              <Button value="6" onClick={(e) => this.showProject(e)}>
-                6
-              </Button>
-              <Button value="7" onClick={(e) => this.showProject(e)}>
-                7
-              </Button>
-              <Button value="8" onClick={(e) => this.showProject(e)}>
-                8
-              </Button>
-              <Button value="9" onClick={(e) => this.showProject(e)}>
-                9
-              </Button>{" "}
-              <Button color="secondary" onClick={() => this.nextNum()}>
-                Next
-              </Button>
-            </ButtonGroup>
-          </ButtonToolbar>
-          <Button color="secondary">
-            <a href={project[projectHolder].github}>GitHub Repository</a>
-          </Button>
-        </div>
-        {projectContainer}
-      </div>
-    );
-  }
+		return (
+			<div>
+				<div class="links">
+					<Button color="secondary">
+						<a href={project[projectHolder].link}>
+							{project[projectHolder].name}
+						</a>
+					</Button>{" "}
+					<div>&nbsp;</div>
+					<ButtonToolbar>
+						<ButtonGroup className="centercontent" size="sm">
+							<Button
+								color="secondary"
+								onClick={() => this.prevNum()}
+							>
+								Prev
+							</Button>
+							<Button
+								value="1"
+								onClick={(e) => this.showProject(e)}
+							>
+								1
+							</Button>
+							<Button
+								value="2"
+								onClick={(e) => this.showProject(e)}
+							>
+								2
+							</Button>
+							<Button
+								value="3"
+								onClick={(e) => this.showProject(e)}
+							>
+								3
+							</Button>
+							<Button
+								value="4"
+								onClick={(e) => this.showProject(e)}
+							>
+								4
+							</Button>
+							<Button
+								value="5"
+								onClick={(e) => this.showProject(e)}
+							>
+								5
+							</Button>
+							<Button
+								value="6"
+								onClick={(e) => this.showProject(e)}
+							>
+								6
+							</Button>
+							<Button
+								value="7"
+								onClick={(e) => this.showProject(e)}
+							>
+								7
+							</Button>
+							<Button
+								value="8"
+								onClick={(e) => this.showProject(e)}
+							>
+								8
+							</Button>
+							<Button
+								value="9"
+								onClick={(e) => this.showProject(e)}
+							>
+								9
+							</Button>{" "}
+							<Button
+								color="secondary"
+								onClick={() => this.nextNum()}
+							>
+								Next
+							</Button>
+						</ButtonGroup>
+					</ButtonToolbar>
+					<Button color="secondary">
+						<a href={project[projectHolder].github}>
+							GitHub Repository
+						</a>
+					</Button>
+				</div>
+				{projectContainer}
+			</div>
+		);
+	}
 }
 export default Project;
