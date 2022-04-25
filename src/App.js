@@ -203,7 +203,7 @@ class App extends Component {
 					<Col>
 						<h6>Name: Benjamin Perkins</h6>
 						<h6>Contact: perkinsben@yahoo.com </h6>
-						<h6>Status: Open for employment.</h6>
+						<h6></h6>
 						<h6>
 							Education:{" "}
 							<a id="edu" href="https://deepdiveeducation.com/">
